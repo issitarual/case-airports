@@ -11,6 +11,18 @@ app = FastAPI()
 async def health():
     return {"status": "ok"}
 
+@app.get("/model/history/", status_code=200, tags=["model"], summary="Forecast of delay at destination")
+async def history():
+    return {"status": "ok"}
+
+@app.post("/model/load/", status_code=200, tags=["model"], summary="Predict")
+async def load():
+    return {"status": "ok"}
+
+@app.post("/model/predict/", status_code=200, tags=["model"], summary="Prediction history")
+async def predict():
+    return {"status": "ok"}
+
 @app.post("/user/", tags=["example"], summary="Insert user")
 async def insert(data: dict):
     db = InMemoryDatabase()
