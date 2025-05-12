@@ -29,7 +29,7 @@ class FlightService:
             self.repo.save_prediction(data.dict(), prediction)
             return {"prediction": prediction}
         except Exception as e:
-            raise HTTPException(status_code=500, detail=f"Error in prediction: {str(e)}")
+            raise HTTPException(status_code=404, detail=f"Error in prediction: {str(e)}")
 
     def get_history(self):
         return self.repo.get_all_predictions()
