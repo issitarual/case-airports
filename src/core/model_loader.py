@@ -1,6 +1,6 @@
 import os
 import pickle
-from fastapi import UploadFile
+from fastapi import UploadFile, HTTPException
 
 MODEL_DIR = "models"
 MODEL_PATH = os.path.join(MODEL_DIR, "airport_delay.pkl")
@@ -18,7 +18,7 @@ class ModelLoader:
 
     async def load(self, file: UploadFile):
         if not file.filename.endswith(".pkl"):
-            return {"error": "The file must be a .pkl template"}
+            raise HTTPException(status_code=400, detail="The file must be a .pkl template")
 
         contents = await file.read()
         with open(MODEL_PATH, "wb") as f:
