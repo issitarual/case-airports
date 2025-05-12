@@ -9,10 +9,11 @@ This is an API wich you can preview a flight delay using a Machine Learn model.
 - [x] Load model endpoint
 - [x] User the model to make a prediction endpoint
 - [x] Show model prediction history endpoint
-- [x] Add tests related to model health and load
+- [x] Add tests related to each endpoint
 - [x] Refactor the code
 ### Future improvements 🔮
-- [ ] Add tests to model history and predict endpoints
+- [ ] Add more tests
+- [ ] Improve model metrics
 
 ## 📍 API Endpoints</h2>
 
