@@ -1,0 +1,4 @@
+*.ipynb
+notebook/
+__pycache__/
+*.pyc

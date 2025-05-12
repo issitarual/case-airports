@@ -2,3 +2,8 @@ fastapi
 uvicorn
 pytest
 mongomock
+numpy
+pandas
+python-multipart
+scikit-learn
+xgboost
