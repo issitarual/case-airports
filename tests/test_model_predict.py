@@ -26,7 +26,8 @@ valid_input = {
     "air_time": 300.0,
     "distance": 2500.0,
     "hour": 12,
-    "minute": 30
+    "minute": 30,
+    "time_hour": "2024-05-12T12:00:00"
 }
 
 @pytest.fixture
@@ -50,7 +51,8 @@ async def test_predict():
         air_time=150.3,
         distance=1000,
         hour=10,
-        minute=0
+        minute=0,
+        time_hour="2024-05-12T12:00:00"
     )
 
     mock_model = MagicMock()

@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from datetime import datetime
 
 class FlightData(BaseModel):
     year: int
@@ -15,3 +16,4 @@ class FlightData(BaseModel):
     distance: float
     hour: int
     minute: int
+    time_hour: datetime

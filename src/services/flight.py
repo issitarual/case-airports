@@ -21,7 +21,7 @@ class FlightService:
             data.year, data.month, data.day, data.dep_time,
             data.sched_dep_time, data.dep_delay, data.carrier,
             data.flight, data.origin, data.dest, data.air_time,
-            data.distance, data.hour, data.minute
+            data.distance, data.hour, data.minute, data.time_hour
         ]])
 
         try:
