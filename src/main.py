@@ -19,7 +19,7 @@ async def history():
 async def load():
     return {"status": "ok"}
 
-@app.post("/model/predict/", status_code=200, tags=["model"], summary="Prediction history")
+@app.post("/model/predict/", status_code=200, tags=["model"], summary="Prediction history") # persist here!!
 async def predict():
     return {"status": "ok"}
 
